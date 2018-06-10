@@ -6,4 +6,6 @@ Types::UserType = GraphQL::ObjectType.define do
   field :id, !types.ID
   field :name, !types.String
   field :email, !types.String
+
+  field :votes, -> { !types[Types::UserType] }
 end
